@@ -8,7 +8,9 @@ public class LoginResponse {
 
 	private String email;
 
-	private String name;
+	private String firstname;
+
+	private String lastname;
 
 	private String mobile;
 
@@ -38,12 +40,20 @@ public class LoginResponse {
 		this.email = email;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastName() {
+		return lastname;
+	}
+
+	public void setLastName(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getMobile() {
@@ -62,12 +72,14 @@ public class LoginResponse {
 		this.role = role;
 	}
 
-	public LoginResponse(String token, long expiresIn, String email, String name, String mobile, String role) {
+	public LoginResponse(String token, long expiresIn, String email, String firstname, String lastname, String mobile,
+			String role) {
 		super();
 		this.token = token;
 		this.expiresIn = expiresIn;
 		this.email = email;
-		this.name = name;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.mobile = mobile;
 		this.role = role;
 	}

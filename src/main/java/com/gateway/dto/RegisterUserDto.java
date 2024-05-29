@@ -4,7 +4,8 @@ public class RegisterUserDto {
 
 	private String email;
 	private String password;
-	private String name;
+	private String firstname;
+	private String lastname;
 	private String mobile;
 	private String role;
 
@@ -12,46 +13,62 @@ public class RegisterUserDto {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public RegisterUserDto setEmail(String email) {
 		this.email = email;
+		return this;
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public RegisterUserDto setPassword(String password) {
 		this.password = password;
+		return this;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public RegisterUserDto setFirstName(String firstname) {
+		this.firstname = firstname;
+		return this;
+	}
+
+	public String getLastName() {
+		return lastname;
+	}
+
+	public RegisterUserDto setLastName(String lastname) {
+		this.lastname = lastname;
+		return this;
 	}
 
 	public String getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(String mobile) {
+	public RegisterUserDto setMobile(String mobile) {
 		this.mobile = mobile;
+		return this; // Return the instance of RegisterUserDto
 	}
 
 	public String getRole() {
 		return role;
 	}
 
-	public void setRole(String role) {
+	public RegisterUserDto setRole(String role) {
 		this.role = role;
+		return this;
 	}
 
-	public RegisterUserDto(String email, String password, String name, String mobile, String role) {
+	public RegisterUserDto(String email, String password, String firstname, String lastname, String mobile,
+			String role) {
 		this.email = email;
 		this.password = password;
-		this.name = name;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.mobile = mobile;
 		this.role = role;
 	}
